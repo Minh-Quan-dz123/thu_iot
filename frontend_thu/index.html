@@ -1,0 +1,18 @@
+<!DOCTYPE html> <!--xác định đây là tài liệu HTML%-->
+<html lang="en"> <!--ngôn ngữ tiếng anh-->
+<head> <!--1: phần đầu begin-->
+  <meta charset="UTF-8"> <!--hỗ trợ tiếng việt-->
+  <title>MQTT Dashboard</title> <!--đặt tựa đề-->
+</head> <!--1: phần đầu end-->
+<body> <!--2: phần thân begin-->
+  <h1>Nhiệt độ & Độ ẩm</h1> <!--2.1: tiêu đề chính của trang-->
+  <p>Nhiệt độ: <span id="temp">--</span> °C</p> <!--2.2.1: đoạn văn bản hiển thị nhiệt độ-->
+  <p>Độ ẩm: <span id="hum">--</span> %</p><!--2.2.2: đoạn văn bản hiển thị độ ẩm-->
+
+  <button id="btn-on">Bật Relay</button> <!--2.3 button Bật Relay có id="btn-on để xử lý sự kiện trong .js"-->
+
+  <!--3: nhúng các tệp vào-->
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script> <!--cho phép thiết lập kết nối với server-->
+  <script src="./script.js"></script> <!--từ cùng thư mục, nơi chứa mã xử lý logic như kết nối Socket.IO, cập nhật và xử lý sự kiện (vd như bấm nút)-->
+</body>
+</html>
