@@ -60,15 +60,15 @@ io.on("connection", (socket) => {
 
   });
 });
-
+/*
 server.listen(3029, () => {
   console.log("Backend server running at http://localhost:3029");
-});
-/*
+});*/
+
 // khởi động server
 const PORT = process.env.PORT || 3029;
 server.listen(PORT, () => {
   console.log(`Backend server running at http://localhost:${PORT}`);
-});*/
+});
 
 
