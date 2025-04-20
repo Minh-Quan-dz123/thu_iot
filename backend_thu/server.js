@@ -62,11 +62,9 @@ io.on("connection", (socket) => {
 });
 
 // khởi động server
-server.listen(3029, () => {
-  console.log("Backend server running at http://localhost:3029");
+const PORT = process.env.PORT || 3029;
+server.listen(PORT, () => {
+  console.log(`Backend server running at http://localhost:${PORT}`);
 });
-// server sẽ chạy trên http://localhost:3029 và lăng nghe WebSocket và xử lý
 
-// cho phép backend phục vụ luôn file HTML,JS trong thư mục frontend/
-const path = require("path");
-app.use(express.static(path.join(__dirname, "../frontend_thu")));
+
