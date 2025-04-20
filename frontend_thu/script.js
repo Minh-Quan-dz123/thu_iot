@@ -1,5 +1,5 @@
 // 1.kết nối tới server backend đang chạy 
-const socket = io("http://localhost:3029");
+const socket = io("https://thu-iot.onrender.com");
 
 // 2.lắng nghe sự kiện mqtt-data từ server để xử lý nhận dữ liệu
 socket.on("mqtt-data", (data) => { //sự kiện "mqtt-data" được tạo ra ở backend đó
